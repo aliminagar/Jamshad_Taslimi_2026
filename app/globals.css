@@ -1,5 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
+/* ── Passions page animations & responsive layout ── */
+@keyframes slowZoom {
+  0%   { transform: scale(1.00); }
+  100% { transform: scale(1.06); }
+}
+
+@media (max-width: 860px) {
+  .two-col,
+  .two-col-rev {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+  .phil-cols {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .split-hero {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 1fr !important;
+    height: auto !important;
+  }
+  .clinic-panel,
+  .keys-panel {
+    min-height: 260px;
+  }
+  .clinic-panel {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
+  }
+  .clinic-bg,
+  .keys-bg {
+    background-position: center center !important;
+    animation: none !important;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

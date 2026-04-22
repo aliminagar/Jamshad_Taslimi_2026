@@ -224,7 +224,7 @@ function EditorialCredentialCard() {
   ];
 
   return (
-    <motion.div ref={ref} style={{ y, position: 'relative', width: '100%', aspectRatio: '4/5', maxHeight: '540px' }}>
+    <motion.div ref={ref} style={{ y, position: 'relative', width: '100%', aspectRatio: '4/5', maxHeight: '540px', overflow: 'hidden' }}>
       <div
         style={{
           position: 'absolute',
