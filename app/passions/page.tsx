@@ -224,7 +224,7 @@ function EditorialCredentialCard() {
   ];
 
   return (
-    <motion.div ref={ref} style={{ y, position: 'relative', width: '100%', aspectRatio: '4/5', maxHeight: '540px' }}>
+    <motion.div ref={ref} style={{ y, position: 'relative', width: '100%', aspectRatio: '4/5' }}>
       <div
         style={{
           position: 'absolute',
@@ -764,8 +764,8 @@ export default function PassionsPage() {
             className="two-col"
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '5rem',
+              gridTemplateColumns: '2fr 3fr',
+              gap: '3.5rem',
               alignItems: 'start',
             }}
           >
@@ -923,8 +923,8 @@ export default function PassionsPage() {
             className="two-col-rev"
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '5rem',
+              gridTemplateColumns: '3fr 2fr',
+              gap: '3.5rem',
               alignItems: 'start',
             }}
           >
