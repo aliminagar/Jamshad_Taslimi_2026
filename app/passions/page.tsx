@@ -764,18 +764,18 @@ export default function PassionsPage() {
             className="two-col"
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
               gap: '5rem',
               alignItems: 'start',
             }}
           >
             {/* LEFT: editorial credential card */}
-            <FadeInUp delay={0.05}>
+            <FadeInUp delay={0.05} style={{ minWidth: 0 }}>
               <EditorialCredentialCard />
             </FadeInUp>
 
             {/* RIGHT: content */}
-            <div>
+            <div style={{ minWidth: 0 }}>
               <FadeInUp delay={0.1}>
                 <h2
                   style={{
@@ -923,13 +923,13 @@ export default function PassionsPage() {
             className="two-col-rev"
             style={{
               display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
+              gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
               gap: '5rem',
               alignItems: 'start',
             }}
           >
             {/* LEFT: content */}
-            <div>
+            <div style={{ minWidth: 0 }}>
               <FadeInUp delay={0.05}>
                 <h2
                   style={{
@@ -985,7 +985,7 @@ export default function PassionsPage() {
             </div>
 
             {/* RIGHT: piano photograph */}
-            <FadeInUp delay={0.1}>
+            <FadeInUp delay={0.1} style={{ minWidth: 0 }}>
               <PianoPhoto />
             </FadeInUp>
           </div>
