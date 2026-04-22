@@ -364,12 +364,17 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitState('submitting');
-    const formData = new FormData(e.currentTarget);
     try {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          name: formState.name,
+          email: formState.email,
+          subject: formState.subject,
+          message: formState.message,
+        }).toString(),
       });
       if (response.ok) {
         setSubmitState('success');
