@@ -1,11 +1,9 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter, JetBrains_Mono } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import GoldCursor from '@/components/GoldCursor';
-import PageTransition from '@/components/PageTransition';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -66,9 +64,7 @@ export default function RootLayout({
         <ScrollProgress />
         <GoldCursor />
         <Navbar />
-        <PageTransition>
-          <main>{children}</main>
-        </PageTransition>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
